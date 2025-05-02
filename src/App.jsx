@@ -1,4 +1,4 @@
-import { Navbar as Project } from './projects/navbar/navbar';
+import { Main as Project } from './projects/sidebar/main';
 
 function App() {
   return (
