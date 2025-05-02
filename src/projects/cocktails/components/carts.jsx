@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../model/context';
 import { CartItem } from './cart-item';
 import { SearchForm } from './search';
 

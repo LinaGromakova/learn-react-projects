@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../model/context';
 import { useState } from 'react';
 import { useRef } from 'react';
 

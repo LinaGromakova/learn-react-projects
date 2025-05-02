@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../model/context';
 
 export function Modal({ type, message }) {
   const { handlerCloseModal } = useGlobalContext();

@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../model/context';
 
 export function CartItem({ id, img, name, glass, char }) {
   const { handlerOpenInfo } = useGlobalContext();

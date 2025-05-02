@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import { AppProvider } from './projects/cocktails/context';
+import { AppProvider } from './projects/cocktails/model/context.jsx';
 
 createRoot(document.getElementById('root')).render(
   <AppProvider>

@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../model/context';
 
 export function SearchForm() {
   const { searchValue, handlerInputChange, handlerApplySearch } = useGlobalContext();

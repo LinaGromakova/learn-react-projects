@@ -1,15 +1,15 @@
-import { Details } from './pages/details';
-import { Header } from './pages/header';
-import { Modal } from './pages/modal';
+import { Details } from './components/details';
+import { Header } from './components/header';
+import { Modal } from './uikit/modal';
 import { BrowserRouter as Router, Route, Routes } from 'react-router';
 import { Page } from './pages/page';
 import './style.css';
-import { Carts } from './pages/carts';
+import { Carts } from './components/carts';
 import { About } from './pages/about';
 import { Subscribe } from './pages/subscribe';
-import { useGlobalContext } from './context';
-import { Loading } from './pages/loading';
-import { Error } from './pages/error';
+import { useGlobalContext } from './model/context';
+import { Loading } from './uikit/loading';
+import { Error } from './uikit/error';
 
 export function Cocktails() {
   const { isModal, modalType, modalMessage, loading, error } = useGlobalContext();
