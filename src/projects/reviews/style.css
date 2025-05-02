@@ -1,0 +1,112 @@
+body {
+  background-color: #f8fafc;
+}
+.review-card {
+  background-color: #fff;
+  width: 45%;
+  margin: 80px auto;
+  text-align: center;
+  padding: 25px 35px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition-duration: 0.5s;
+  border-radius: 5px;
+}
+.review-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.review-name {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  color: #0f172a;
+}
+.review-job {
+  text-transform: uppercase;
+  color: #645cff;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 2.5px 0px 15px 0px;
+}
+.description {
+  color: #475569;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+.btn-control {
+  color: #3c3799;
+  font-weight: 700;
+  font-size: 25px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  margin: 15px 0px;
+}
+.btn-control:hover {
+  color: #645cff;
+}
+.btn-control:first-child {
+  margin-right: 20px;
+}
+.btn-random {
+  cursor: pointer;
+  background-color: #c1beff;
+  color: #645cff;
+  transition-duration: 0.5s;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  letter-spacing: 1.2px;
+}
+.btn-random:hover {
+  color: #c1beff;
+  background-color: #3c3799;
+}
+img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+}
+.avatar-img {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.avatar-img::before {
+  content: '”';
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  position: absolute;
+  z-index: 100;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 60px;
+  line-height: 80px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #645cff;
+  left: 0;
+  top: 15px;
+}
+.avatar-img::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #645cff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: -5px;
+  right: -8px;
+  z-index: 5;
+}

@@ -1,4 +1,4 @@
-import { Tours as Project } from './projects/tours/tours';
+import { Reviews as Project } from './projects/reviews/reviews';
 
 function App() {
   return (
