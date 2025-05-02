@@ -1,0 +1,143 @@
+body {
+  background-color: #f8fafc;
+}
+.wrapper {
+  margin: 70px auto;
+  width: 83%;
+  display: flex;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+h2 {
+  background-color: #cbd5e1;
+  display: inline-block;
+  font-size: 15px;
+  padding: 4.5px 12px;
+  margin: 10px 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: #334155;
+}
+h3 {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  margin-bottom: 25px;
+  color: #64748b;
+}
+.nav {
+  margin-right: 50px;
+}
+.btn-nav {
+  cursor: pointer;
+  display: block;
+  width: 16vw;
+  padding: 10px 0px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+}
+.btn-nav:nth-child(2n) {
+  margin: 5px 0px;
+}
+
+.active {
+  position: relative;
+  color: #14b8a6;
+  transition-duration: 0.5s;
+}
+.btn-nav::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 25%;
+  width: 2px;
+  height: 50%;
+  background-color: #14b8a6;
+  opacity: 0;
+}
+.btn-nav.active::before {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.info {
+  position: relative;
+  margin-left: 50px;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.text-info {
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.marker {
+  display: inline-block;
+  margin-right: 30px;
+  color: #14b8a6;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.loading-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-left: 1px solid #14b8a6;
+  border-top: 5px solid #cbd5e1a4;
+  border-bottom: 5px solid #cbd5e1a4;
+  border-right: 5px solid #cbd5e1a4;
+  animation: loading-anim 1.5s linear infinite;
+}
+.loading-wrapper::after {
+  content: 'Loading';
+  text-align: center;
+  display: block;
+  width: 70px;
+  font-size: 22px;
+  color: #14b8a6;
+  animation: letter-anim 1.5s linear infinite;
+  margin-top: 20px;
+}
+@keyframes loading-anim {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes letter-anim {
+  0% {
+    content: 'Loading';
+  }
+  33% {
+    content: 'Loading.';
+  }
+  66% {
+    content: 'Loading..';
+  }
+  99% {
+    content: 'Loading...';
+  }
+}

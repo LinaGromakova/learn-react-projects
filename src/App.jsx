@@ -1,4 +1,4 @@
-import { Slider as Project } from './projects/slider/slider';
+import { Tabs as Project } from './projects/tabs/tabs';
 
 function App() {
   return (
