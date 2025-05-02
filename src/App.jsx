@@ -1,4 +1,4 @@
-import { Cart as Project } from './projects/cart/cart';
+import { Cocktails as Project } from './projects/cocktails/cocktails';
 
 function App() {
   return (
