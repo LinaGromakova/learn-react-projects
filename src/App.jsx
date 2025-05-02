@@ -1,4 +1,4 @@
-import { Main as Project } from './projects/sidebar/main';
+import { StripeSubmenus as Project } from './projects/stripe-submenus/stripe-submenus';
 
 function App() {
   return (
