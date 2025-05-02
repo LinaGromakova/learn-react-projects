@@ -1,4 +1,4 @@
-import { StripeSubmenus as Project } from './projects/stripe-submenus/stripe-submenus';
+import { Cart as Project } from './projects/cart/cart';
 
 function App() {
   return (
