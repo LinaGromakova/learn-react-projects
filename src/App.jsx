@@ -1,4 +1,4 @@
-import { Reviews as Project } from './projects/reviews/reviews';
+import { Accordion as Project } from './projects/accordion/accordion';
 
 function App() {
   return (
