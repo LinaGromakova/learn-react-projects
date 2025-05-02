@@ -1,4 +1,4 @@
-import { Accordion as Project } from './projects/accordion/accordion';
+import { Menu as Project } from './projects/menu/menu';
 
 function App() {
   return (
