@@ -1,4 +1,4 @@
-import { GroceryBud as Project } from './projects/grocery-bud/grocery-bud';
+import { Navbar as Project } from './projects/navbar/navbar';
 
 function App() {
   return (
