@@ -1,4 +1,4 @@
-import { Cocktails as Project } from './projects/cocktails/cocktails';
+import { BirthdayReminder  as Project } from './projects/birthday-reminder/birthday-reminder';
 
 function App() {
   return (
