@@ -1,4 +1,4 @@
-import { Tabs as Project } from './projects/tabs/tabs';
+import { LoremIpsum as Project } from './projects/lorem-ipsum/lorem-ipsum';
 
 function App() {
   return (
