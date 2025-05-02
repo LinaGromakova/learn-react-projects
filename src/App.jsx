@@ -1,4 +1,4 @@
-import { ColorGenerator as Project } from './projects/color-generator/color-generator';
+import { GroceryBud as Project } from './projects/grocery-bud/grocery-bud';
 
 function App() {
   return (
