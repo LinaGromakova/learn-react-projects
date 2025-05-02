@@ -1,4 +1,4 @@
-import { LoremIpsum as Project } from './projects/lorem-ipsum/lorem-ipsum';
+import { ColorGenerator as Project } from './projects/color-generator/color-generator';
 
 function App() {
   return (
