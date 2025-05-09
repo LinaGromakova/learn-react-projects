@@ -1,0 +1,248 @@
+body {
+}
+.header {
+}
+
+.header-login-container {
+  background-color: #021431;
+}
+.login-link {
+  color: #c7c9d1;
+  text-decoration: none;
+  font-size: 14px;
+}
+.login-link:hover {
+  text-decoration: underline;
+}
+.login-link:last-child {
+  margin-left: 20px;
+}
+.header-navbar-container {
+  background-color: #f0f6ff;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.header > * > .container {
+  display: flex;
+  padding: 10px 0px;
+}
+.header-login-container > .container {
+  justify-content: flex-end;
+}
+.header-navbar-container > .container {
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+  width: 52px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #dbe1ff;
+  background-color: #057aff;
+  line-height: 36px;
+  transition: background-color 0.5s ease-out;
+}
+.logo:hover {
+  background-color: #0069e0;
+}
+.list-links {
+  display: flex;
+  list-style-type: none;
+}
+.nav-link {
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 8px 16px;
+  border-radius: 7.5px;
+  font-size: 14px;
+  color: #394e6a;
+  transition-duration: 0.5s;
+}
+.link-active {
+  background-color: #021431;
+  color: #c7c9d1;
+}
+.link-active:hover {
+  background-color: #021431 !important;
+}
+.nav-link:hover {
+  background-color: #dee5f0;
+}
+.btn-nav {
+  display: flex;
+  align-items: center;
+}
+.btn-nav > * {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #394e6a;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+.btn-theme-change {
+  font-size: 22px;
+}
+.btn-cart {
+  position: relative;
+
+  font-size: 26px;
+  border-radius: 50%;
+}
+
+.btn-cart > :first-child {
+  margin-left: 8px;
+}
+.btn-cart:hover {
+  background-color: #cbd5e1;
+}
+.btn-cart-count {
+  top: 2px;
+  right: 0px;
+  position: absolute;
+  background-color: #057aff;
+  color: #fff;
+  font-size: 12px;
+  padding: 1px 8px;
+  border-radius: 12px;
+  color: #dbe1ff;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+}
+.about-page,
+.home-page {
+  padding: 70px 0px;
+}
+.container {
+}
+.title_big {
+  font-size: 60px;
+  color: #394e6a;
+  text-align: center;
+}
+.about-page > * > .title_big::after {
+  content: 'comfy';
+  font-size: 36px;
+  letter-spacing: 3.6px;
+  color: #dbe1ff;
+  background-color: #057aff;
+  border-radius: 15px;
+  padding: 12px 25px;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+}
+.main-subtitle {
+  color: rgb(57, 78, 106);
+  font-size: 18px;
+  line-height: 32px;
+  margin: 32px auto 0px auto;
+  width: 61%;
+}
+
+.fullcreen {
+  display: flex;
+  column-gap: 70px;
+}
+.fullscreen-column {
+  flex: 0 1 50%;
+}
+.fullscreen-column > .title_big {
+  text-align: left;
+}
+.fullscreen-column > .main-subtitle {
+  margin-left: 0;
+  margin-right: 0;
+  width: 95%;
+}
+.btn-main {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  background-color: #057aff;
+  color: #dbe1ff;
+  transition-duration: 0.5s;
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.btn-main:hover {
+  background-color: #0069e0;
+}
+.slider {
+  background-color: #021431;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  min-height: 550px;
+}
+.home-page-main {
+  margin-top: 100px;
+}
+.title_main {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(57, 78, 106);
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.line-decoration {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(226, 232, 244);
+}
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 20px;
+  margin-top: 50px;
+}
+.card-item {
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-radius: 20px;
+  padding: 16px;
+  transition-duration: 0.5s;
+}
+.card-item:hover {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.card-img {
+  width: 100%;
+  object-fit: cover;
+  height: 190px;
+  border-radius: 10px;
+}
+.card-main {
+  padding: 20px;
+  text-align: center;
+}
+.card-title {
+  color: rgb(57, 78, 106);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.card-price {
+  margin-top: 10px;
+  color: rgb(70, 58, 161);
+  font-size: 16px;
+}
