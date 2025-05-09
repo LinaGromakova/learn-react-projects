@@ -1,4 +1,4 @@
-import { Cocktails as Project } from './projects/cocktails/cocktails';
+import { ComfyStore as Project } from './projects/comfy-store/comfy-store';
 
 function App() {
   return (
