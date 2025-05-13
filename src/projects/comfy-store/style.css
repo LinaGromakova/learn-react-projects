@@ -99,7 +99,7 @@ button {
 }
 .btn-cart {
   position: relative;
-
+  transition-duration: 0.5s;
   font-size: 26px;
   border-radius: 50%;
 }
@@ -128,8 +128,7 @@ button {
 .home-page {
   padding: 70px 0px;
 }
-.container {
-}
+
 .title_big {
   font-size: 60px;
   color: #394e6a;
@@ -473,4 +472,125 @@ button {
 }
 .form-link-message {
   margin-right: 8px;
+}
+.pagination {
+  text-align: right;
+}
+.btn-pagination {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #f0f6ff;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  transition-duration: 0.5s;
+  text-transform: uppercase;
+  color: #394e6a;
+}
+.btn-pagination:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.btn-pagination:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.btn-pagination:hover {
+  background-color: #e2e8f4;
+}
+
+.btn-page_active {
+  background-color: #e2e8f4;
+}
+
+/* .form-search {
+  margin: 100px 0px 50px 0px;
+  background-color: #f0f6ff;
+  padding: 16px 32px;
+  border-radius: 6px;
+}
+.label-search {
+}
+.input-search {
+}
+.filter-select {
+}
+.filter-option {
+}
+.btn-apply {
+}
+.search {
+}
+.reset {
+} */
+.modal {
+  position: fixed;
+  background-color: #fff;
+  top: 10%;
+  width: 350px;
+  padding: 8px 16px;
+  left: calc(50% - 175px);
+  box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+  z-index: 200;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.btn-close-modal {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.icon-close-modal {
+  color: #394e6a;
+  font-size: 30px;
+  transition-duration: 0.5s;
+}
+.icon-close-modal:hover {
+  color: #5e7491;
+}
+.modal-text {
+  color: #394e6a;
+  font-size: 16px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.icon-modal {
+  font-size: 25px;
+}
+.icon-modal.success {
+  color: #12a52d;
+}
+.icon-modal.error {
+  color: #dc1414;
+}
+.modal-content {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+}
+.modal-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  animation: progress-bar-show 2s linear forwards;
+}
+.modal-progress-bar.success {
+  background-color: #12a52d;
+}
+.modal-progress-bar.error {
+  background-color: #dc1414;
+}
+@keyframes progress-bar-show {
+  to {
+    width: 0%;
+  }
 }
