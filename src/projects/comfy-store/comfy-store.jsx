@@ -1,6 +1,7 @@
 import { Header } from './components/header';
 import { Product } from './components/product';
 import { About } from './pages/about';
+import { Cart } from './pages/cart';
 import { Home } from './pages/home';
 import { Products } from './pages/products';
 
@@ -12,7 +13,7 @@ export function ComfyStore() {
   return (
     <>
       <Header />
-
+      <Cart></Cart>
       {/* <Modal></Modal> */}
     </>
   );
