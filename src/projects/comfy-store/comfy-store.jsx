@@ -4,12 +4,13 @@ import { About } from './pages/about';
 import { Home } from './pages/home';
 
 import './style.css';
+import { FormLogin } from './uikit/form-login';
 import { Loading } from './uikit/loading';
 export function ComfyStore() {
   return (
     <>
-      <Header />
-      <Loading></Loading>
+      {/* <Header /> */}
+      <FormLogin></FormLogin>
     </>
   );
 }
