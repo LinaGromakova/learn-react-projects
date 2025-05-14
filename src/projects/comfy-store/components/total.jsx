@@ -1,6 +1,6 @@
 export function Total() {
   return (
-    <div className='total'>
+    
       <div className='total-wrapper'>
         <p className='total-row'>
           <span className='total-name'>Subtotal</span>
@@ -19,9 +19,7 @@ export function Total() {
           <span className='total-price'>$3,832.77</span>
         </p>
       </div>
-      <button type='button' className='btn-cart-total'>
-        proceed to checkout
-      </button>
-    </div>
+     
+ 
   );
 }

@@ -13,7 +13,12 @@ export function Cart() {
             <CartItem></CartItem>
             <CartItem></CartItem>
           </div>
-          <Total></Total>
+          <div className='total'>
+            <Total></Total>
+            <button type='button' className='btn-cart-total'>
+              proceed to checkout
+            </button>
+          </div>
         </div>
       </div>
     </section>
