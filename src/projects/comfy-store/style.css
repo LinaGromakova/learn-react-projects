@@ -475,6 +475,7 @@ button {
 }
 .pagination {
   text-align: right;
+  margin-top: 64px;
 }
 .btn-pagination {
   cursor: pointer;
@@ -503,27 +504,204 @@ button {
 .btn-page_active {
   background-color: #e2e8f4;
 }
-
-/* .form-search {
-  margin: 100px 0px 50px 0px;
+.products-page {
+  margin: 60px 0px;
+}
+.form-search {
+  margin-top: 100px;
   background-color: #f0f6ff;
   padding: 16px 32px;
   border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 32px 16px;
+  color: #394e6a;
 }
 .label-search {
+  display: block;
+  text-transform: capitalize;
+  font-size: 14px;
 }
-.input-search {
+.label-search > * {
+  margin-top: 10px;
+}
+input[type='checkbox'] {
+  appearance: none;
+  width: 20px !important;
+  height: 20px;
+  border: 1px solid #057aff;
+  border-radius: 8px;
+  background-color: transparent;
+  overflow: hidden;
+}
+input[type='checkbox']:checked {
+  background-color: #057aff;
+}
+input[type='checkbox']:checked::before {
+  content: '✔';
+  display: block;
+  color: #dbe1ff;
+  font-size: 16px;
+  margin-top: -2.5px;
+  text-align: center;
+  transform: translateY(10px);
+  animation: show-checkbox 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+input[type='range'] {
+  appearance: none;
+  background: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  border: none;
+  background-color: #dee5f0;
+}
+
+input[type='range']::-moz-range-track {
+  background-color: #dee5f0;
+  height: 4px;
+  border-radius: 2px;
+  border: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  background: #fff;
+  margin-top: -7px;
+  border: 3px solid #057aff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+input[type='range']::-moz-range-thumb {
+  appearance: none;
+  background: #fff;
+  margin-top: -7px;
+  border: 2px solid #057aff;
+  outline-offset: 1px;
+  outline: 1px solid #6db1ff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.label-search > input,
+.label-search > select {
+  display: block;
+  width: 100%;
+}
+.label-search:has(input[type='checkbox']) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-search,
+.filter-select {
+  display: block;
+  height: 32px;
+  width: 100%;
+  padding: 5.5px 12px;
+  font-size: 14px;
+  border: 1px solid #394e6a33;
+  border-radius: 8px;
+  color: #394e6a;
+}
+.input-search:focus,
+.filter-select:focus {
+  outline-offset: 2px;
+  outline: 2px solid #394e6a33;
+}
+.label-search > .wrapper-select > .icon-select {
+  left: auto;
+  top: 10px;
+  right: 12px;
 }
 .filter-select {
+  appearance: none;
+  font-weight: 600;
 }
-.filter-option {
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 8px;
 }
+.label-row:first-child > :last-child {
+  font-size: 16px;
+}
+.label-row:last-child {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
 .btn-apply {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  height: 32px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition-duration: 0.5s;
 }
-.search {
+.btn-apply.search {
+  background-color: #057aff;
+  color: #dbe1ff;
 }
-.reset {
-} */
+.btn-apply.search:hover {
+  background-color: #0069e0;
+}
+.btn-apply.reset {
+  background-color: #c149ad;
+  color: #f5dbee;
+}
+.btn-apply.reset:hover {
+  background-color: #ab3b98;
+}
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0px 20px 0px;
+  color: #394e6a;
+}
+@keyframes show-checkbox {
+  to {
+    transform: translateY(0);
+  }
+}
+.panel-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.control-panel-btn-wrapper {
+}
+.btn-control-panel {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #394e6a;
+  transition-duration: 0.5s;
+  padding-top: 2.5px;
+}
+.btn-control-panel:hover {
+  background-color: #d7dce1;
+}
+.btn-control-panel:first-child {
+  margin-right: 8px;
+}
+.btn-control-panel.active {
+  color: #dbe1ff;
+  background-color: #057aff;
+}
+.btn-control-panel.active:hover {
+  background-color: #0069e0;
+}
 .modal {
   position: fixed;
   background-color: #fff;

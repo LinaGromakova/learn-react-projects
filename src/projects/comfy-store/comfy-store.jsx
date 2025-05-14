@@ -13,7 +13,7 @@ export function ComfyStore() {
   return (
     <>
       <Header />
-      <Cart></Cart>
+      <Products></Products>
       {/* <Modal></Modal> */}
     </>
   );
