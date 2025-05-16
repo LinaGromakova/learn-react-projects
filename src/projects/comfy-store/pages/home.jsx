@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { Card } from '../components/card';
 import { CardsWrapper } from '../components/cards-wrapper';
 
@@ -12,9 +13,11 @@ export function Home() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo
               enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.
             </p>
-            <button type='button' className='btn-main'>
-              our products
-            </button>
+            <Link to='/products'>
+              <button type='button' className='btn-main'>
+                our Products
+              </button>
+            </Link>
           </div>
           <div className='fullscreen-column'>
             <div className='slider'></div>

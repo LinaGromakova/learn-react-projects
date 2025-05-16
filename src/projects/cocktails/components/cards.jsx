@@ -1,5 +1,5 @@
 import { useGlobalContext } from '../model/context';
-import { CartItem } from './cart-item';
+import { CartItem } from './card-item';
 import { SearchForm } from './search';
 
 export function Carts() {

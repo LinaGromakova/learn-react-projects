@@ -1,18 +1,18 @@
 import { GoChevronRight } from 'react-icons/go';
+import { Link, useParams } from 'react-router';
+
 export function Product() {
   return (
     <section className='product-item-page'>
       <div className='container'>
         <nav className='link-back-nav'>
-          <a href='' className='link-back'>
+          <Link to='/' className='link-back'>
             Home
-          </a>
-
+          </Link>
           <GoChevronRight className='arrow-link'></GoChevronRight>
-
-          <a href='' className='link-back'>
+          <Link to='/products' className='link-back'>
             Products
-          </a>
+          </Link>
         </nav>
         <article className='product-content-wrapper'>
           <img

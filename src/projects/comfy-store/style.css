@@ -58,9 +58,9 @@ button {
 }
 .list-links {
   display: flex;
-  list-style-type: none;
 }
 .nav-link {
+  text-decoration: none;
   cursor: pointer;
   text-transform: capitalize;
   padding: 8px 16px;
@@ -69,11 +69,11 @@ button {
   color: #394e6a;
   transition-duration: 0.5s;
 }
-.link-active {
+a.active {
   background-color: #021431;
   color: #c7c9d1;
 }
-.link-active:hover {
+a.active:hover {
   background-color: #021431 !important;
 }
 .nav-link:hover {
