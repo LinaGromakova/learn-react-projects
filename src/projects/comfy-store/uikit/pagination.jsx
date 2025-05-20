@@ -1,4 +1,8 @@
 export function Pagination() {
+  // const configPagination = {
+  //   prevBtn: 'prev',
+
+  // }
   return (
     <div className='pagination'>
       <button type='button' className='btn-pagination'>

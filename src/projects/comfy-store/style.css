@@ -283,7 +283,7 @@ a.active:hover {
 .card-item:hover {
   box-shadow: 0 25px 50px -12px #00000040;
 }
-.card-item:hover .card-img {
+.card-item.row:hover .card-img {
   transform: scale(1.05);
 }
 .card-img {

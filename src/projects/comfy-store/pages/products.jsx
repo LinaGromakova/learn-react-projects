@@ -213,25 +213,45 @@ export function Products() {
   const [products, setProducts] = useState(data);
   const [filtersValues, setFiltersValues] = useState(arr);
   const [typeCard, setCardType] = useState('basic');
-  // useEffect(() => {
-  //   fetch('https://strapi-store-server.onrender.com/api/products')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setProducts(data.data);
-  //       setFiltersValues(data.meta);
-  //     });
-  // }, []);
-  console.log(filtersValues);
-  console.log(products);
+  const [filters, setFilters] = useState('');
+
+  function getFilters(refsArr) {
+    const filtersObj = {};
+    refsArr.current.map((ref) => {
+      filtersObj[ref.current.name] = ref.current.value;
+    });
+    return setFilters(
+      Object.entries(filtersObj).join('&').replaceAll(',', '=').replace('&shipping=of', '')
+    );
+  }
+
+  function resetFilters(refsArr) {
+    refsArr.current.map((ref) => {
+      ref.current.checked = false;
+      ref.current.value = ref.current.dataset.resetValue;
+    });
+    setFilters('');
+  }
+  useEffect(() => {
+    fetch(`https://strapi-store-server.onrender.com/api/products?${filters}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setFiltersValues(data.meta);
+        setProducts(data.data);
+      });
+  }, [filters]);
+
   return (
     <section className='products-page'>
       <div className='container'>
         <ProductFilter
           categories={filtersValues.categories}
           companies={filtersValues.companies}
+          handlerBtnSearchClick={getFilters}
+          handlerBtnResetClick={resetFilters}
         ></ProductFilter>
         <div className='control-panel'>
-          <h5 className='panel-title'>22 products</h5>
+          <h5 className='panel-title'>{filtersValues.pagination.total} products</h5>
           <div className='control-panel-btn-wrapper'>
             <button
               type='button'

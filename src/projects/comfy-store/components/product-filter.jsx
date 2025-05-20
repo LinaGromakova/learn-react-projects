@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import React, { createRef, useRef, useState } from 'react';
 import { GoTriangleDown } from 'react-icons/go';
 
-export function ProductFilter({ companies, categories }) {
-  const [rangeValue, setRangeValue] = useState(0);
+export function ProductFilter({
+  companies,
+  categories,
+  handlerBtnSearchClick,
+  handlerBtnResetClick,
+}) {
+  const [rangeValue, setRangeValue] = useState(1000000);
+  const [checkbox, setCheckbox] = useState('of');
+
+  const refs = useRef([...Array(6)].map(() => createRef()));
+
   let priceValue;
   if (rangeValue == 0) {
     priceValue = '0.00';
@@ -15,13 +24,24 @@ export function ProductFilter({ companies, categories }) {
     <form className='form-search' action='#' onSubmit={(e) => e.preventDefault()}>
       <label className='label-search'>
         search product
-        <input type='search' className='input-search' />
+        <input
+          type='search'
+          name='search'
+          className='input-search'
+          ref={refs.current[0]}
+          data-reset-value=''
+        />
       </label>
       <label className='label-search'>
         select category
         <div className='wrapper-select'>
           <GoTriangleDown className='icon-select'></GoTriangleDown>
-          <select name='categories' id='categories' className='filter-select'>
+          <select
+            name='category'
+            className='filter-select'
+            ref={refs.current[1]}
+            data-reset-value={categories[0]}
+          >
             {categories.map((category, index) => {
               return (
                 <option value={category} key={index}>
@@ -36,7 +56,12 @@ export function ProductFilter({ companies, categories }) {
         select company
         <div className='wrapper-select'>
           <GoTriangleDown className='icon-select'></GoTriangleDown>
-          <select name='company' id='company' className='filter-select'>
+          <select
+            name='company'
+            className='filter-select'
+            ref={refs.current[2]}
+            data-reset-value={companies[0]}
+          >
             {companies.map((company, index) => {
               return (
                 <option value={company} key={index}>
@@ -51,7 +76,12 @@ export function ProductFilter({ companies, categories }) {
         sort by
         <div className='wrapper-select'>
           <GoTriangleDown className='icon-select'></GoTriangleDown>
-          <select name='sort' id='sort' className='filter-select'>
+          <select
+            name='order'
+            className='filter-select'
+            ref={refs.current[3]}
+            data-reset-value='a-z'
+          >
             <option value='a-z'>a-z</option>
             <option value='z-a'>z-a</option>
             <option value='high'>high</option>
@@ -71,12 +101,13 @@ export function ProductFilter({ companies, categories }) {
           <div className='range-track'></div>
           <input
             type='range'
-            name='range-price'
-            id='range-price'
+            name='price'
+            ref={refs.current[4]}
             value={rangeValue}
             min='0'
             max='1000000'
             step='10000'
+            data-reset-value='1000000'
             onChange={(e) => setRangeValue(e.target.value)}
           />
         </div>
@@ -88,12 +119,32 @@ export function ProductFilter({ companies, categories }) {
       </label>
       <label className='label-search'>
         free shipping
-        <input type='checkbox' name='free-shipping' id='shipping' />
+        <input
+          type='checkbox'
+          data-reset-value='of'
+          name='shipping'
+          value={checkbox}
+          onChange={(e) => setCheckbox(e.target.value === 'on' ? 'of' : 'on')}
+          id='shipping'
+          ref={refs.current[5]}
+        />
       </label>
-      <button type='button' className='btn-apply search'>
+      <button
+        type='button'
+        className='btn-apply search'
+        onClick={() => handlerBtnSearchClick(refs)}
+      >
         search
       </button>
-      <button type='button' className='btn-apply reset'>
+      <button
+        type='button'
+        className='btn-apply reset'
+        onClick={() => {
+          handlerBtnResetClick(refs);
+          setRangeValue(1000000);
+          setCheckbox('of');
+        }}
+      >
         reset
       </button>
     </form>
